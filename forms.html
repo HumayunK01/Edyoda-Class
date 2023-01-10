@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+
+    <form>
+        <fieldset>
+            <legend>My Easy Form</legend>
+            <label for="Name">Email Address:</label>
+            <br>
+            <input type="text" id="email">
+            <br>
+            <label for="Name">Mobile Number:</label>
+            <br>
+            <input type="number" id="number">
+            <br>
+            <label for="password">Password:</label>
+            <br>
+            <input type="password" id="password">
+            <br>
+            <label for="Comment">Feedback:</label>
+            <br>
+            <textarea id="Comment" cols="30" rows="4"></textarea>
+            <br>
+            <input type="button" value="Submit">
+        </fieldset>
+    </form>
+    <br>
+    <form>
+        <fieldset>
+            <legend>My Easy Form 2</legend>
+
+            <label for="states">Select States:</label>
+            <select id="states">
+                <optgroup label="States">
+                    <option>Jammu & Kashmir</option>
+                    <option>Punjab</option>
+                    <option>Uttar Pradesh</option>
+                    <option>Rajasthan</option>
+                    <option>Karnataka</option>
+                    <option>Maharashtra</option>
+                    <option>Telangana</option>
+                    <option>Tamil Nadu</option>
+                </optgroup>
+                <optgroup label="Union Territory">
+                    <option>New Delhi</option>
+                    <option>Pondichery</option>
+                    <option>Chandigarh</option>
+                </optgroup>
+            </select>
+        </fieldset>
+    </form>
+    <br>
+    <form>
+        <fieldset>
+            <legend>Assignment 1</legend>
+            <label for="Heading"><b>Using DataList Tag</b></label>
+            <br>
+            <label for="browser">Choose your browser from the list:</label>
+            <input list="browsers" id="browser">
+            <datalist id="browsers">
+                <option value="Edge">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+                <option value="Brave">
+            </datalist>
+        </fieldset>
+    </form>
+    <br>
+    <form>
+        <fieldset>
+            <legend>Assingment 2</legend>
+            <table border="1" width="400">
+                <tr>
+                    <td align="center" colspan="3"><h1>Fill The Form Below</h1></td>
+                </tr>
+                <tr>
+                    <td align="center">Name:</td>
+                    <td colspan="2"><input type="text"></td>
+                </tr>
+                <tr>
+                    <td align="center">Password:</td>
+                    <td colspan="2"><input type="password"></td>
+                </tr>
+                <tr>
+                    <td align="center">Feedback:</td>
+                    <td colspan="2"><textarea cols="18"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">Gender:</td>
+                    <td colspan="2">
+                        <input type="radio">Male
+                        <input type="radio">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">Subjects:</td>
+                    <td colspan="2">
+                        <input type="checkbox">Web
+                        <input type="checkbox">Maths
+                        <input type="checkbox">Graphics
+                        <input type="checkbox">English
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="1"></td>
+                    <td><input type="button" value="Reset All"><input type="button" value="Submit All Details"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+
+</body>
+</html>
