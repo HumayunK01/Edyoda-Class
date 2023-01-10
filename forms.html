@@ -13,7 +13,7 @@
             <legend>My Easy Form</legend>
             <label for="Name">Email Address:</label>
             <br>
-            <input type="text" id="email">
+            <input type="text" id="email" placeholder="example@gmail.com">
             <br>
             <label for="Name">Mobile Number:</label>
             <br>
@@ -33,8 +33,28 @@
     <br>
     <form>
         <fieldset>
-            <legend>My Easy Form 2</legend>
+            <legend>Easy Form 2</legend>
+            <h1>Select Your Gender</h1>
+            <label for="m">Male</label>
+            <input type="radio" name="gender" id="m">
+            <label for="m">Female</label>
+            <input type="radio" name="gender" id="f">
 
+            <h1>Hobbies:</h1>
+            <input type="checkbox" name="gender" id="cricket">
+            <label for="cricket">Cricket</label>
+            <br>
+            <input type="checkbox" name="gender" id="football">
+            <label for="football">Football</label>
+            <br>
+            <input type="checkbox" name="gender" id="hockey">
+            <label for="hockey">Hockey</label>
+        </fieldset>
+    </form>
+    <br>
+    <form>
+        <fieldset>
+            <legend>My Easy Form 3</legend>
             <label for="states">Select States:</label>
             <select id="states">
                 <optgroup label="States">
@@ -53,6 +73,30 @@
                     <option>Chandigarh</option>
                 </optgroup>
             </select>
+        </fieldset>
+    </form>
+    <br>
+    <form>
+        <fieldset>
+            <legend>All Input Types</legend>
+            <input type="text" placeholder="Full Name">
+            <br>
+            <input type="password" placeholder="Password">
+            <br>
+            <input type="email" placeholder="example@gmail.com">
+            <br>
+            <input type="number" placeholder="Phone Number">
+            <br>
+            <input type="color">
+            <br>
+            <input type="date">
+            <br>
+            <input type="search" placeholder="Serach...">
+            <br>
+            <input type="file">
+            <br>
+            <input type="range" min="0" step="5" max="20">
+            <br>
         </fieldset>
     </form>
     <br>
@@ -97,8 +141,8 @@
                 <tr>
                     <td align="center">Gender:</td>
                     <td colspan="2">
-                        <input type="radio">Male
-                        <input type="radio">Female
+                        <input type="radio" name="gender">Male
+                        <input type="radio" name="gender">Female
                     </td>
                 </tr>
                 <tr>
