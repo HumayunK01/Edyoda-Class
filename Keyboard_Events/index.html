@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet"
+    />
+    <title>KeyBoard Events</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      body .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      body .container h1 {
+        font-weight: 500;
+      }
+      .key-Holder {
+        background-color: #000;
+        color: #fff;
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        padding: 10px;
+        border-radius: 10px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Keyboard Events</h1>
+      <span id="keyHolder" class="key-Holder"></span>
+    </div>
+  </body>
+  <script>
+    const keyHolder = document.getElementById("keyHolder");
+    var hidekeyHolder;
+    var isShiftPressed = false;
+    var isCtrlPressed = false;
+    var isAltPressed = false;
+
+    document.addEventListener("keydown", (e) => {
+      keyHolder.style.display = "block";
+      keyHolder.innerText = e.key == " " ? "SpaceBar" : e.key;
+      clearTimeout(hidekeyHolder);
+    });
+    document.addEventListener("keyup", (e) => {
+      hidekeyHolder = setTimeout(function () {
+        keyHolder.style.display = "none";
+      }, 1000);
+    });
+  </script>
+</html>
