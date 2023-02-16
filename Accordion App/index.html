@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion App</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    .wrapper {
+      background-color: #ccc;
+      margin: 0 auto;
+      max-width: 600px;
+      padding: 50px;
+      border-radius: 15px;
+    }
+    h1 {
+      background-color: #9f9f9f;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: 500;
+      border-bottom: 1px solid #000;
+    }
+    p {
+      padding: 10px 20px;
+      margin: 0 0 10px 0;
+      background-color: #ccc;
+      display: none;
+    }
+    h1.active + p {
+      display: block;
+    }
+  </style>
+  <body>
+    <div class="wrapper">
+      <div class="accordion">
+        <h1>Lorem ipsum 1</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quas,
+          quia dolor delectus illum aspernatur quis assumenda reiciendis,
+          voluptate inventore sit? Quia maiores ea praesentium ipsam vel
+          provident quaerat nulla!
+        </p>
+      </div>
+      <div class="accordion">
+        <h1>Lorem ipsum 2</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quas,
+          quia dolor delectus illum aspernatur quis assumenda reiciendis,
+          voluptate inventore sit? Quia maiores ea praesentium ipsam vel
+          provident quaerat nulla!
+        </p>
+      </div>
+      <div class="accordion">
+        <h1>Lorem ipsum 3</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quas,
+          quia dolor delectus illum aspernatur quis assumenda reiciendis,
+          voluptate inventore sit? Quia maiores ea praesentium ipsam vel
+          provident quaerat nulla!
+        </p>
+      </div>
+    </div>
+  </body>
+  <script>
+    const h1Els = document.getElementsByTagName("h1");
+
+    for (let i = 0; i < h1Els.length; i++) {
+      h1Els[i].addEventListener("click", (e) => {
+        let clickedEl = e.target;
+        if (clickedEl.classList.contains("active")) {
+          clickedEl.classList.remove("active");
+        } else {
+          clickedEl.classList.add("active");
+        }
+      });
+    }
+  </script>
+</html>
