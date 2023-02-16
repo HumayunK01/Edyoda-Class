@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,10 +14,74 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: "Montserrat", sans-serif;
+        font-family: "Poppins", sans-serif;
+      }
+      .wrapper {
+        background-color: #ccc;
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 50px;
+        border-radius: 15px;
+      }
+      h1 {
+        font-weight: 500;
+        margin: 0 0 30px 0;
+      }
+      .clock {
+        display: flex;
+        justify-content: space-between;
+      }
+      .clock .time {
+        width: 100px;
+        height: 100px;
+        background-color: #fff;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
       }
     </style>
   </head>
-  <body></body>
-  <script></script>
+  <body>
+    <div class="wrapper">
+      <h1>The Current Time is:</h1>
+      <div class="clock">
+        <div class="time" id="hour"></div>
+        <div class="time" id="min"></div>
+        <div class="time" id="sec"></div>
+        <div class="time" id="ampm"></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function clock() {
+      const hourEl = document.getElementById("hour");
+      const minEl = document.getElementById("min");
+      const secEl = document.getElementById("sec");
+      const ampmEl = document.getElementById("ampm");
+
+      var time = new Date();
+      var h = time.getHours();
+      var m = time.getMinutes();
+      var s = time.getSeconds();
+      ampmEl.innerText = h > 12 ? "PM" : "AM";
+
+      //  To Convert 24 hour format into 12 hour format
+      h = h > 12 ? h % 12 : h;
+
+      //  Add 0 in the beginning of time if its single digit
+      h = h < 10 ? "0" + h : h;
+      m = m < 10 ? "0" + m : m;
+      s = s < 10 ? "0" + s : s;
+
+      hourEl.innerText = h;
+      minEl.innerText = m;
+      secEl.innerText = s;
+    }
+
+    setInterval(() => {
+      clock();
+    }, 1000);
+  </script>
 </html>
