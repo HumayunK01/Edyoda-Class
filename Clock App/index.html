@@ -55,12 +55,12 @@
     </div>
   </body>
   <script>
-    function clock() {
-      const hourEl = document.getElementById("hour");
-      const minEl = document.getElementById("min");
-      const secEl = document.getElementById("sec");
-      const ampmEl = document.getElementById("ampm");
+    const hourEl = document.getElementById("hour");
+    const minEl = document.getElementById("min");
+    const secEl = document.getElementById("sec");
+    const ampmEl = document.getElementById("ampm");
 
+    function clock() {
       var time = new Date();
       var h = time.getHours();
       var m = time.getMinutes();
